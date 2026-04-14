@@ -51,18 +51,50 @@ console.log(ordenados);
 
 
 
+let opcion = "";
 
+const resultado = document.getElementById("resultado");
 
+function mostrarMenu() {
+    opcion = prompt(
+        "MENU:\n" +
+        "1. Ver aprendices\n" +
+        "2. Ver aprobados\n" +
+        "3. Ver reprobados\n" +
+        "4. Ver promedio\n" +
+        "0. Salir"
+    );
 
+    switch (opcion) {
 
+        case "1":
+            resultado.innerHTML = "<h3>Lista de aprendices</h3>" +
+                aprendices.map(a => `${a.nombre} - ${a.nota} - ${a.programa}`).join("<br>");
+            break;
 
+        case "2":
+            resultado.innerHTML = "<h3>Aprobados</h3>" +
+                aprobados.map(a => `${a.nombre} - ${a.nota}`).join("<br>");
+            break;
 
+        case "3":
+            resultado.innerHTML = "<h3>Reprobados</h3>" +
+                reprobados.map(a => `${a.nombre} - ${a.nota}`).join("<br>");
+            break;
 
+        case "4":
+            resultado.innerHTML = `<h3>Promedio: ${promedio}</h3>`;
+            break;
 
+        case "0":
+            resultado.innerHTML = "<h3>Saliste del sistema</h3>";
+            return;
 
+        default:
+            resultado.innerHTML = "<h3>Opción inválida</h3>";
+    }
 
+    
+}
 
-
-
-
-
+mostrarMenu();
