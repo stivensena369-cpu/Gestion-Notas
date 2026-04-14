@@ -29,9 +29,25 @@ const reprobados = aprendices.filter (aprendiz =>
     console.log ("Estudiantes reprobados", reprobados);
 
 
+// Calcular el promedio de las notas
 
+const promedio =
+aprendices.reduce((acumulador, aprendiz) => acumulador + aprendiz.nota, 0) / aprendices.length;
 
+// Mostrar el promedio
 
+console. log("Promedio general: ");
+console. log(promedio);
+
+// Ordenar aprendices de mayor a menor nota
+
+const ordenados = aprendices.sort((a, b) => b.nota - a.nota);
+
+// Mostrar lista ordenada
+
+console.log("Aprendices ordenados por nota: ");
+
+console.log(ordenados);
 
 
 
