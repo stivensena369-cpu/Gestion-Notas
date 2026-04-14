@@ -8,3 +8,45 @@ const aprendices = [
 
 console.log("Lista de aprendices:");
 console.log(aprendices);
+
+
+
+
+//filtrar aprendices aprobados (nota >=3)
+
+const aprobados = aprendices.filter (aprendiz =>
+    aprendiz.nota >=3);
+
+    //filtrar aprendices reprobados (nota <3)
+    
+const reprobados = aprendices.filter (aprendiz =>
+    aprendiz.nota <3);
+
+    //mostramos resultamos
+
+    console.log ("Estudiantes aprobados", aprobados);
+
+    console.log ("Estudiantes reprobados", reprobados);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
